@@ -1,24 +1,24 @@
-import { Box, Container, CssBaseline } from '@material-ui/core';
-import red from '@material-ui/core/colors/red';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-import axios from 'axios';
-import App from 'next/app';
-import Head from 'next/head';
-import React from 'react';
-import { SWRConfig } from 'swr';
-import { Nav } from '../components/Nav';
+import { Box, Container, CssBaseline } from "@material-ui/core";
+import red from "@material-ui/core/colors/red";
+import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+import axios from "axios";
+import App from "next/app";
+import Head from "next/head";
+import React from "react";
+import { SWRConfig } from "swr";
+import { Nav } from "../components/Nav";
 
 // Create a theme instance.
 export const theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#556cd6',
+      main: "#556cd6",
     },
     error: {
       main: red.A400,
     },
     background: {
-      default: '#fff',
+      default: "#fff",
     },
   },
 });
@@ -26,7 +26,7 @@ export const theme = createMuiTheme({
 export default class MyApp extends App {
   componentDidMount() {
     // Remove the server-side injected CSS.
-    const jssStyles = document.querySelector('#jss-server-side');
+    const jssStyles = document.querySelector("#jss-server-side");
     if (jssStyles) {
       jssStyles.parentElement!.removeChild(jssStyles);
     }
@@ -43,6 +43,13 @@ export default class MyApp extends App {
             name="viewport"
             content="minimum-scale=1, initial-scale=1, width=device-width"
           />
+          <meta name="description" content="Free Web tutorials" />
+          <meta name="keywords" content="HTML, CSS, JavaScript" />
+          <meta name="author" content="John Doe" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          ></meta>
         </Head>
         <ThemeProvider theme={theme}>
           {/* CssBaseline kick start an elegant, consistent, and simple baseline to build upon. */}
